@@ -27,5 +27,5 @@ add_executable(ChaosEngine main.cpp)
 add_dependencies(ChaosEngine ffmpeg)
 target_link_libraries(ChaosEngine
 	glfw
-	OpenGL::GL
+	OpenGL
 )
