@@ -1,5 +1,6 @@
 cmake_minimum_required(VERSION 3.31.0)
-project(ChaosEngine)
+project(ChaosEngine VERSION 0.0.0)
+set(PROJECT_VERSION_TAG "Alpha")
 
 set(GLFW_BUILD_DOCS OFF CACHE BOOL "" FORCE)
 set(GLFW_BUILD_TESTS OFF CACHE BOOL "" FORCE)
