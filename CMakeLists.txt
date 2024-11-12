@@ -7,6 +7,12 @@ set(GLFW_BUILD_TESTS OFF CACHE BOOL "" FORCE)
 set(GLFW_BUILD_EXAMPLES OFF CACHE BOOL "" FORCE)
 set(BUILD_SHARED_LIBS ON CACHE BOOL "Build GLFW as a shared library")
 
+configure_file(
+	${CMAKE_CURRENT_LIST_DIR}/version.h.in
+	${CMAKE_CURRENT_BINARY_DIR}/version.h
+)
+
+
 find_package(OpenGL REQUIRED)
 
 add_custom_target(ffmpeg
