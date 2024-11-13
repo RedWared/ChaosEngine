@@ -1,6 +1,18 @@
 cmake_minimum_required(VERSION 3.31.0)
 project(ChaosEngine VERSION 0.0.0)
-set(PROJECT_VERSION_TAG "Alpha")
+# A = Alpha
+# B = Beta
+# R = Release
+# D = Delta
+# Delta version are version unfinishes after first release
+
+set(PROJECT_VERSION_TAG "A")
+
+if (PROJECT_VERSION_TAG STREQUAL "R")
+	set(PROJECT_VERSION_STRING "${PROJECT_VERSION}")
+else()
+	set(PROJECT_VERSION_STRING "${PROJECT_VERSION_TAG}${PROJECT_VERSION}")
+endif()
 
 set(GLFW_BUILD_DOCS OFF CACHE BOOL "" FORCE)
 set(GLFW_BUILD_TESTS OFF CACHE BOOL "" FORCE)
