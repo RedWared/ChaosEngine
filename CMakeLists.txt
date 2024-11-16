@@ -24,7 +24,6 @@ configure_file(
 	${CMAKE_CURRENT_BINARY_DIR}/version.h
 )
 
-
 find_package(OpenGL REQUIRED)
 
 add_custom_target(ffmpeg
@@ -34,10 +33,19 @@ add_custom_target(ffmpeg
 )
 
 add_subdirectory(${CMAKE_CURRENT_LIST_DIR}/external/glfw)
-
-add_executable(ChaosEngine main.cpp)
-add_dependencies(ChaosEngine ffmpeg)
-target_link_libraries(ChaosEngine
+add_library(Chaos SHARED
+	engine.cpp
+	include/Chaos/engine.hpp
+	include/Chaos/common.hpp
+	logsys/error.cpp
+	logsys/log.cpp
+)
+add_dependencies(Chaos ffmpeg)
+target_link_libraries(Chaos
 	glfw
 	OpenGL
+)
+
+target_include_directories(Chaos PUBLIC
+	${CMAKE_CURRENT_LIST_DIR}/include
 )
