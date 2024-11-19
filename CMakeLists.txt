@@ -14,11 +14,6 @@ else()
 	set(PROJECT_VERSION_STRING "${PROJECT_VERSION_TAG}${PROJECT_VERSION}")
 endif()
 
-set(GLFW_BUILD_DOCS OFF CACHE BOOL "" FORCE)
-set(GLFW_BUILD_TESTS OFF CACHE BOOL "" FORCE)
-set(GLFW_BUILD_EXAMPLES OFF CACHE BOOL "" FORCE)
-set(BUILD_SHARED_LIBS ON CACHE BOOL "Build GLFW as a shared library")
-
 configure_file(
 	${CMAKE_CURRENT_LIST_DIR}/version.h.in
 	${CMAKE_CURRENT_BINARY_DIR}/version.h
@@ -32,7 +27,6 @@ add_custom_target(ffmpeg
 	WORKING_DIRECTORY ${CMAKE_CURRENT_LIST_DIR}/external/FFmpeg
 )
 
-add_subdirectory(${CMAKE_CURRENT_LIST_DIR}/external/glfw)
 add_library(Chaos SHARED
 	engine.cpp
 	include/Chaos/engine.hpp
@@ -42,7 +36,6 @@ add_library(Chaos SHARED
 )
 add_dependencies(Chaos ffmpeg)
 target_link_libraries(Chaos
-	glfw
 	OpenGL
 )
 
