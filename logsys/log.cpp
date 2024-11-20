@@ -1,6 +1,5 @@
-#include <Chaos/engine.hpp>
-#include <Chaos/common.hpp>
+#include <ChaosEngine/engine.hpp>
 
-void engine::log(const char* msg){
+void Engine::log(string msg){
 	cout << msg << "\n";
 }

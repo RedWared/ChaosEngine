@@ -1,15 +1,9 @@
-#include <iostream>
-#include <strings.h>  // Para strcasecmp
+#include <ChaosEngine/engine.hpp>
 
-int main() {
-	const char* str1 = "hola";
-	const char* str2 = "uwu";
+Engine::Engine(){
+	log("Starting ChaosEngine version "+string(CHAOS_VERSION));
+}
 
-	if (strcasecmp(str1, str2) == 0) {
-		std::cout << "Las cadenas son iguales.\n";
-	} else {
-		std::cerr << "Las cadenas son diferentes.\n";
-	}
-
-	return 0;
+Engine::~Engine(){
+	log("Stoping ChaosEngine");
 }
