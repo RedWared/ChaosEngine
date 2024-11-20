@@ -1,7 +1,27 @@
 # ChaosEngine
 ChaosEngine source code
 
-## Mirrors of this repo
+## Build
+```
+mkdir build
+cd build
+cmake ..
+make
+```
+
+## Example of use.
+```C++
+#include <ChaosEngine/engine.hpp>
+
+int main(){
+	Engine wah;
+	wah.log("ChaosEngine basic example");
+	wah.CreateWin();
+	return 0;
+}
+```
+
+## Mirrors of this repo.
 [GitHub](https://github.com/RedWared/ChaosEngine)
 [GitLab](https://gitlab.com/Reisy243/chaosengine)
 [SOURCEFORGE](https://sourceforge.net/p/chaos-engine/git)
