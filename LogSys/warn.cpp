@@ -1,4 +1,5 @@
 #include <ChaosEngine/engine.hpp>
 
-void warn(string msg){
+void Engine::warn(string msg){
+	cout << "WARNING: " << msg << endl;
 }

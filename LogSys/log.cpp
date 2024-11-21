@@ -1,4 +1,5 @@
 #include <ChaosEngine/engine.hpp>
 
-void log(string msg){
+void Engine::log(string msg){
+	cout << msg << endl;
 }

@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.31.0)
-project(ChaosEngine VERSION 0.0.0)
+project(ChaosEngine VERSION 0.0.1)
 
 # A = Alpha
 # B = Beta
@@ -15,8 +15,8 @@ else()
 endif()
 
 configure_file(
-	${CMAKE_CURRENT_LIST_DIR}/internal/info.hpp.in
-	${CMAKE_CURRENT_LIST_DIR}/internal/info.hpp
+	${CMAKE_CURRENT_LIST_DIR}/internal/ChaosInfo.hpp.in
+	${CMAKE_CURRENT_LIST_DIR}/internal/ChaosInfo.hpp
 )
 
 add_library(Chaos SHARED
