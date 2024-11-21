@@ -1,0 +1,4 @@
+#ifndef INFO_HPP
+#define INFO_HPP
+#define CHAOS_VERSION "${PROJECT_VERSION_STRING}"
+#endif // INFO_HPP
